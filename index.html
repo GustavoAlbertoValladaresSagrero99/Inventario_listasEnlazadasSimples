@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario con listas enlazadas</title>
+</head>
+<body>
+
+    <style>
+        .info
+        {
+            width: 100%;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .info #msj
+        {
+            padding: 10px;
+            width: 500px;
+            border: 1px solid #000;
+            background: orange;
+            margin: auto;
+        }
+    </style>
+    
+    <div class="titulo">
+        <H1>App Inventario Con Listas Enlazadas</H1>
+        <h3>Alumno: Gustavo Alberto Valladares Sagrero 3H - Ingenieria de software</h3>
+    </div>
+
+    <div class="info">
+        <p id="msj"><span id="msjTitulo"></span><span id="msjObjeto"></span></p>
+    </div>
+
+    <div class="App">
+        <form id="inputForm">
+            <div class="novoContainer">
+                <label for="">Posición:<input type="number" placeholder="Introduce posición" id="posAdd" min="0"></label>
+            </div>
+            <div class="novoContainer">
+                <label for="">Codigo producto:<input type="number" placeholder="Introduce el código" id="codeAdd"></label>
+            </div>
+            <div class="novoContainer">
+                <label for="">Nombre producto:<input type="text" placeholder="Introduce el nombre" id="nameAdd"></label>
+            </div>
+            <div class="novoContainer">
+                <label for="">Cantidad de productos:<input type="number" placeholder="Introduce la cantidad de productos" id="unitAdd"></label>
+            </div>
+            <div class="novoContainer">
+                <label for="">Costo unitario del producto:<input type="number" placeholder="Introduce el costo" id="costAdd"></label>
+            </div>
+            <div class="novoContainer">
+                <button type="button" id="add">Agregar</button>
+            </div>
+        </form>
+
+        <form>
+            <div class="novoContainer">
+                <label for="">Codigo producto:<input type="number" placeholder="Introduce el código del producto" id="inputSearch"></label>
+            </div>
+            <div class="novoContainer">
+                <button type="button" id="search">Buscar</button>
+                <button type="button" id="delete">Eliminar</button>
+                <button type="button" id="deleteALL">Eliminar TODO</button>
+            </div>
+        </form>
+
+        <form>
+            <div class="novoContainer">
+                <button type="button" id="list">Listar</button>
+                <button type="button" id="invertList">Invertir Lista</button>
+            </div>  
+        </form>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Costo</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="table"></tbody>
+        </table>
+    </div>
+
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
